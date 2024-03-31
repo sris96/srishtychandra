@@ -15,12 +15,12 @@ body {
 }
 
 a {
-  color: #149ddd;
+  color: #255b4d;
   text-decoration: none;
 }
 
 a:hover {
-  color: #37b3ed;
+  color: #3effcd;
   text-decoration: none;
 }
 
@@ -31,6 +31,10 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
+}
+
+.text-primary {
+  color: #253d40 !important;
 }
 
 /*--------------------------------------------------------------
@@ -79,7 +83,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background: #253d40;
   overflow-y: auto;
 }
 
@@ -102,7 +106,7 @@ h6 {
 
 #header .profile h1 a,
 #header .profile h1 a:hover {
-  color: #fff;
+  color: #a2a392;
   text-decoration: none;
 }
 
@@ -110,7 +114,7 @@ h6 {
   font-size: 18px;
   display: inline-block;
   background: #212431;
-  color: #fff;
+  color: #a2a392;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -122,8 +126,8 @@ h6 {
 }
 
 #header .profile .social-links a:hover {
-  background: #149ddd;
-  color: #fff;
+  background: #4f726a;
+  color: #a2a392;
   text-decoration: none;
 }
 
@@ -202,7 +206,7 @@ h6 {
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #149ddd;
+  color: #3effcd;
 }
 
 /* Mobile Navigation */
@@ -241,8 +245,20 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/hero-bg-3.jpg") top center;
   background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -100;
+}
+
+#landing-page {
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  position: relative;
 }
 
 #hero:before {
@@ -256,13 +272,13 @@ h6 {
   z-index: 1;
 }
 
-#hero .hero-container {
+#landing-page .hero-container {
   position: relative;
   z-index: 2;
   min-width: 300px;
 }
 
-#hero h1 {
+#landing-page h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
   font-weight: 700;
@@ -270,18 +286,18 @@ h6 {
   color: #fff;
 }
 
-#hero p {
+#landing-page p {
   color: #fff;
   margin-bottom: 50px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
 }
 
-#hero p span {
+#landing-page p span {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+  border-bottom: 3px solid #92724b;
 }
 
 @media (min-width: 1024px) {
@@ -291,12 +307,12 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  #hero h1 {
+  #landing-page h1 {
     font-size: 28px;
     line-height: 36px;
   }
 
-  #hero h2 {
+  #landing-page h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
@@ -325,7 +341,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color: #253d40;
 }
 
 .section-title h2::after {
@@ -334,7 +350,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  background: #92724b;
   bottom: 0;
   left: 0;
 }
@@ -346,10 +362,15 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
+#main {
+ background-color: rgb(142,143,125, 0.9);
+}
+
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #173b6c;
+  color: #253d40;
 }
 
 .about .content ul {
@@ -365,12 +386,13 @@ section {
 
 .about .content ul strong {
   margin-right: 10px;
+  color: #3f5450;
 }
 
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #149ddd;
+  color: #ffffff;
   line-height: 0;
 }
 
@@ -474,13 +496,13 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: #253d40;
 }
 
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  border-left: 2px solid #305d61;
   position: relative;
 }
 
@@ -490,13 +512,13 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: #3f5450;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #e4edf9;
+  background: #999b8a;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -525,6 +547,10 @@ section {
   top: 0;
   background: #fff;
   border: 2px solid #1f5297;
+}
+
+.resume .resume-item p strong {
+    color: #3f5450;
 }
 
 /*--------------------------------------------------------------
@@ -849,18 +875,18 @@ section {
 
 .contact .info {
   padding: 30px;
-  background: #fff;
+  background: #818371;
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
 .contact .info i {
   font-size: 20px;
-  color: #149ddd;
+  color: #a2a392;
   float: left;
   width: 44px;
   height: 44px;
-  background: #dff3fc;
+  background: #253d40;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -873,14 +899,14 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #050d18;
+  color: #253d40;
 }
 
 .contact .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #173b6c;
+  color: #3f5450;
 }
 
 .contact .info .email p {
@@ -914,14 +940,14 @@ section {
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #149ddd;
+  background: #255b4d;
   color: #fff;
 }
 
 .contact .php-email-form {
   width: 100%;
   padding: 30px;
-  background: #fff;
+  background: #818371;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -1002,7 +1028,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #149ddd;
+  background: #3f5450;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1011,7 +1037,27 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #37b3ed;
+  background: #253d40;
+}
+
+.form-group label {
+    color: #253d40;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group input:active,
+.form-group textarea:active,
+.form-group input:focus,
+.form-group textarea:focus {
+    background: #8f907f;
+    border: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: #8f907f;
+    border: none;
 }
 
 @keyframes animate-loading {
